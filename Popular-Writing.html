@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Professor Dean Karlan</title>
+    <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .container{
+            max-width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body id="body" data-spy="scroll" data-target=".header" data-offset="0">
+
+<header class="header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand logo-wrap" href="#body">
+            <span style="font-weight:600; font-size:25px; color: #e9e9e9">Professor Dean Karlan</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto mt-lg-0 ">
+                <li class="js_nav-item nav-item"><a class="nav-link  nav-item-child nav-item-hover"
+                                                    href="index.html">Home</a>
+                </li>
+                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
+                                                    href="index.html#about">About</a></li>
+                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
+                                                    href="images/KarlanCV1016.docx"
+                                                    download="Dean Karlan">CV</a></li>
+                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
+                                                    href="index.html#initiatives-promo">Research</a></li>
+                <li class="js_nav-item nav-item dropdown">
+                    <a class="nav-link nav-item-child nav-item-hover dropdown-toggle active" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Publications
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover active" href="Popular-Writing.html">Popular Writing</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Policy-Papers.html">Policy Papers</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Academic-Papers.html">Academic Papers</a>
+                    </div>
+                </li>
+                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
+                                                    href="books.html">Books</a>
+                </li>
+                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
+                                                    href="index.html">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+<main role="main">
+
+    <section id="books" style="padding-top: 95px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="books-container">
+
+                        <div class="title-container">
+
+                            <h2 class="section-title">Popular Writing</h2>
+                            <p style="text-align: center"><br><br>Professor Dean Karlan has published the following ..<br><br><br></p>
+                        </div>
+
+                        <!-- Card deck -->
+                        <form class="paperTable">
+
+                            <br>
+
+
+                            <br>
+                            <div id="popular-writing-table-info" style="display: inline-flex; float: left">
+                            </div><div style="display: inline-flex; float: right; margin-right: 30px;">
+                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br><br><br>
+                            <div id="popular-writing-table"></div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-area">
+            <p class="footer-content">
+            <div class="col-xs-12">
+                <a href="#"
+                   class="text-uppercase wow zoomIn" target="_blank"><h4>Dean Karlan</h4></a>
+                <h5>Kellogg School of Management | Northwestern University</h5>
+                <h6>Kellogg Global Hub</h6>
+                <h6>Room 4441, 2211 Campus Drive</h6>
+                <h6>Evanston, IL 60208</h6>
+
+
+            </div>
+            </p>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.back-to-top.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+    $('.navbar-nav>li>a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+</script>
+
+<link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/materialize/tabulator_materialize.min.css" rel="stylesheet">
+<link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/bootstrap/tabulator_bootstrap4.min.css" rel="stylesheet">
+
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.5.3/dist/js/tabulator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script>
+    var dateFormatter = function(cell, formatterParams){
+        var value = cell.getValue();
+
+        if(value){
+            value = moment(Date.parse(value)).format("MM/DD/YYYY");
+        }
+        return value;
+    }
+
+
+
+    var c = 0;
+    var div = "";
+
+    function display(results) {
+
+        function titleFunction(headerValue, rowValue, rowData, filterParams){
+
+            var searchStrings= headerValue.split(" ");
+
+            var stringPresent = false;
+
+            $.each(searchStrings, function (j, searchString) {
+                if(rowData.title.toLowerCase().includes(searchString.toLowerCase())){
+                    stringPresent = true;
+                } else {
+                    stringPresent = false;
+                    return false;
+                }
+            });
+            return stringPresent;
+        }
+
+        var outletEditor = function(cell, onRendered, success, cancel, editorParams){
+
+            var editor = $("<select id='outletSelect'>" +
+                "<option value=''>ALL</option>" +
+                "<option value='Alliance Magazine'>Alliance Magazine</option>" +
+                "<option value='Boston Review'>Boston Review</option>" +
+                "<option value='Council on Foreign Relations'>Council on Foreign Relations</option>" +
+                "<option value='Financial Times'>Financial Times</option>" +
+                "<option value='Foreign Policy'>Foreign Policy</option>" +
+                "<option value='Freakonomics'>Freakonomics</option>" +
+                "<option value='Harvard Business Review'>Harvard Business Review</option>" +
+                "<option value='International Banker'>International Banker</option>" +
+                "<option value='Los Angeles Times'>Los Angeles Times</option>" +
+                "<option value='Marketplace on National Public Radio'>Marketplace on National Public Radio</option>" +
+                "<option value='Microfinance Insights'>Microfinance Insights</option>" +
+                "<option value='New York Times'>New York Times</option>" +
+                "<option value='Project Syndicate'>Project Syndicate</option>" +
+                "<option value='Reuters'>Reuters</option>" +
+                "<option value='Scientific American'>Scientific American</option>" +
+                "<option value='Stanford Social Innovation Review'>Stanford Social Innovation Review</option>" +
+                "<option value='The Christian Science Monitor'>The Christian Science Monitor</option>" +
+                "<option value='The Indian Express'>The Indian Express</option>" +
+                "<option value='Wall Street Journal'>Wall Street Journal</option>" +
+                "</select>");
+            editor.css({
+                "padding":"5px",
+                "width":"100%",
+                "box-sizing":"border-box",
+            })
+
+            onRendered(function(){
+                editor.focus();
+            });
+
+            editor.on("change blur", function(e){
+                success(editor.val());
+            });
+
+            editor.on("keydown", function(e){
+                if(e.keyCode == 13){
+                    success(editor.val());
+                }
+            });
+            //return the editor element
+            return editor[0];
+        }
+
+
+
+
+        var table = new Tabulator("#popular-writing-table", {
+            data:results,
+            columns:[
+                {title:"Title", field:"title", width:'60%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
+                {title:"Outlet", field:"Outlet", width:"27%", headerFilter:outletEditor, headerFilterFunc:"like"},
+                {title:"Date", field:"date", width:'13%', sorter:"date", sorterParams:{format:"MM/DD/YYYY"},formatter:dateFormatter }
+            ],
+            dataFiltered:function(filters, rows){
+                //filters - array of filters currently applied
+                //rows - array of row components that pass the filters
+                var div = document.getElementById('popular-writing-table-info');
+
+                div.innerHTML = 'There are ' + rows.length + " articles available matching your search criteria.";
+
+            }
+        });
+        $('#popular-writing-table').addClass("table-striped");
+
+        $(document).on("click","#resetBtn", function(){
+            table.clearHeaderFilter();
+        });
+
+        $(window).resize(function() {
+            table.redraw(true);
+        });
+
+    }
+
+
+
+</script>
+<script src="https://script.google.com/macros/s/AKfycbxxLhVMEEuzo00sUwQghvgiz1wYyioplE5qANI3y4YrCo9vhRwc/exec?prefix=display">
+
+</script>
+
+
+</body>
+</html>
