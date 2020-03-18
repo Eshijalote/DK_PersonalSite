@@ -814,7 +814,7 @@ a#navbarDropdown.nav-link.dropdown-toggle:hover{
 }
 .tabulator-row .tabulator-cell, .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title{
 	white-space: normal!important;
-	word-break: break-all;
+
 }
 #resetBtn{
 
