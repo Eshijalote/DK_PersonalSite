@@ -182,8 +182,8 @@
                 {title:"Citation<br>Count", field:"citation", width:'12%'},
                 {title:"Title", field:"title", width:'31%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
                 {title:"Date", field:"date", width:'14%', sorter:"date", sorterParams:{format:"MM/YYYY"},formatter:dateFormatter },
-                {title:"Publication", field:"publication", width:"20%"},
-                {title:"Co-Authors & Data links", field:"authors", width:"23%", headerSort:false, formatter:"html"}
+                {title:"Publication", field:"publication", width:"20%", formatter:"html", headerSort:false},
+                {title:"Co-Authors", field:"authors", width:"23%", headerSort:false}
 
 
             ],
