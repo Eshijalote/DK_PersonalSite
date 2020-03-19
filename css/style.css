@@ -19,7 +19,7 @@ ul {
 }
 
 .initiatives-promo-content ul, .initiatives-promo-content a {
-	color: white;
+	/* color: white; */
 	text-align: left;
 }
 .initiatives-promo-content p{
@@ -387,7 +387,7 @@ button:focus {
 .about-container {
 	display: inline;
 	float: left;
-	padding: 100px 0;
+	padding: 100px 0 0 0;
 	width: 100%;
 }
 
@@ -498,7 +498,8 @@ button:focus {
 }
 
 
-#initiatives-promo {
+
+/*#initiatives-promo {
 	background-image: url("../images/about/karlan-home2-1.jpg");
 	background-attachment: fixed;
 	background-position: center center;
@@ -514,7 +515,7 @@ button:focus {
 	float: left;
 	opacity: 0.8;
 	width: 100%;
-}
+}*/
 
 .initiatives-promo-content {
 	display: inline;
@@ -523,7 +524,7 @@ button:focus {
 	text-align: center;
 	width: 100%;
 }
-
+/*
 .initiatives-promo-content h2 {
 	color: #fff;
 }
@@ -531,7 +532,7 @@ button:focus {
 .initiatives-promo-content p {
     color: #fff;
     font-size: 18px;
-}
+}*/
 
 #publications , #books, #initiatives{
 	background-color: #fff;
@@ -622,8 +623,8 @@ button:focus {
 
 .section-title-dot,
 .section-title-dot::before,
-.section-title-dot::after,
-.initiatives-promo-overlay {
+.section-title-dot::after/*,
+.initiatives-promo-overlay*/ {
     background-color: #1f468d;
 }
 
