@@ -84,7 +84,6 @@
 
                         </div>
 
-                        <!-- Card deck -->
                         <form class="paperTable">
 
                             <br>
@@ -182,10 +181,10 @@
         var table = new Tabulator("#policy-papers-table", {
             data:results,
             columns:[
-                {title:"Title", field:"title", width:'41%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
-                {title:"Date", field:"date", width:'17%', sorter:"date", sorterParams:{format:"MM/YYYY"},formatter:dateFormatter },
-                {title:"Source", field:"source", width:"20%"},
-                {title:"Co-Authors", field:"authors", width:"22%"}
+                {title:"Title", field:"title", width:'43%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
+                {title:"Date", field:"date", width:'13%%', formatter:dateFormatter},
+                {title:"Source", field:"source", width:"18%"},
+                {title:"Co-Authors", field:"authors", width:"26%", headerSort:false}
 
             ],
             dataFiltered:function(filters, rows){

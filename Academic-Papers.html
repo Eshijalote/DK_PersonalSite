@@ -12,7 +12,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<style>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.5.3/dist/js/tabulator.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+
+    <style>
     .container{
         max-width: 100%;
         padding-left: 10px;
@@ -20,8 +29,7 @@
     }
 </style>
 
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="js/jquery.min.js" type="text/javascript"></script>
+
 
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -85,21 +93,31 @@
                             <h2 class="section-title">Academic Papers</h2><br/><br/>
 
                         </div>
-
+                        <div class="table-controls">
+      <span>
+       <label>Field: </label>
+       <select id="sort-field">
+          <option value="title" selected="">Title</option>
+          <option value="date">Date</option>
+          <option value="citation">Citation Count</option>
+      </select>
+      </span><span>
+      <label>Direction:</label>
+      <select id="sort-direction">
+          <option value="asc" selected="">Ascending</option>
+          <option value="desc">Descending</option>
+      </select>
+    </span><button id="sort-trigger" class="btn btn-light-blue btn-md waves-effect waves-light">Sort</button>
+                        </div><br/>
                         <!-- Card deck -->
                         <form class="paperTable">
-
-                            <br>
-
-
                             <br>
                             <div id="academic-papers-table-info" style="display: inline-flex; float: left">
                             </div><div style="display: inline-flex; float: right; margin-right: 30px;">
                             <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br><br><br>
+
                             <div id="academic-papers-table"></div>
-
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -138,8 +156,6 @@
 <link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/materialize/tabulator_materialize.min.css" rel="stylesheet">
 <link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/bootstrap/tabulator_bootstrap4.min.css" rel="stylesheet">
 
-<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.5.3/dist/js/tabulator.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script>
     var dateFormatter = function(cell, formatterParams){
         var value = cell.getValue();
@@ -177,13 +193,12 @@
 
         var table = new Tabulator("#academic-papers-table", {
             data:results,
-
             columns:[
-                {title:"Citation<br>Count", field:"citation", width:'12%'},
-                {title:"Title", field:"title", width:'31%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
-                {title:"Date", field:"date", width:'14%', sorter:"date", sorterParams:{format:"MM/YYYY"},formatter:dateFormatter },
-                {title:"Publication", field:"publication", width:"20%", formatter:"html", headerSort:false},
-                {title:"Co-Authors", field:"authors", width:"23%", headerSort:false}
+                {title:"Citation<br>Count", field:"citation", width:'0%', visible:false, headerSort:false},
+                {title:"Title", field:"title", width:'40%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title", headerSort:false},
+                {title:"Date", field:"date", width:'10%', formatter:dateFormatter , headerSort:false},
+                {title:"Publication", field:"publication", width:"21%", formatter:"html", headerSort:false},
+                {title:"Co-Authors", field:"authors", width:"29%", headerSort:false}
 
 
             ],
@@ -196,6 +211,7 @@
 
             }
         });
+
         $('#academic-papers-table').addClass("table-striped");
 
         $(document).on("click","#resetBtn", function(){
@@ -204,6 +220,11 @@
 
         $(window).resize(function() {
             table.redraw(true);
+        });
+
+        //Trigger sort when "Trigger Sort" button is clicked
+        $("#sort-trigger").click(function(){
+            table.setSort($("#sort-field").val(), $("#sort-direction").val());
         });
 
     }
