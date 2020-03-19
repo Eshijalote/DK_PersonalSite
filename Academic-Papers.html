@@ -135,8 +135,10 @@
                    class="text-uppercase wow zoomIn" target="_blank"><h4>Dean Karlan</h4></a>
                 <h5>Kellogg School of Management | Northwestern University</h5>
                 <h6>Kellogg Global Hub</h6>
-                <h6>Room 4441, 2211 Campus Drive</h6>
+                <h6>2211 Campus Drive, Room 4441</h6>
                 <h6>Evanston, IL 60208</h6>
+                <h6>deankarlan@gmail.com</h6>
+
             </div>
             </p>
         </div>
@@ -197,8 +199,8 @@
                 {title:"Citation<br>Count", field:"citation", width:'0%', visible:false, headerSort:false},
                 {title:"Title", field:"title", width:'40%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title", headerSort:false},
                 {title:"Date", field:"date", width:'10%', formatter:dateFormatter , headerSort:false},
-                {title:"Publication", field:"publication", width:"21%", formatter:"html", headerSort:false},
-                {title:"Co-Authors", field:"authors", width:"29%", headerSort:false}
+                {title:"Publication", field:"publication", width:"21%", formatter:"html", headerSort:false,  headerFilter:"input", headerFilterPlaceholder: "Search by Publication"},
+                {title:"Co-Authors", field:"authors", width:"29%", headerSort:false, headerFilter:"input", headerFilterPlaceholder: "Search by Co-Authors"}
 
 
             ],
