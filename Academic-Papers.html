@@ -100,6 +100,7 @@
           <option value="title" selected="">Title</option>
           <option value="date">Date</option>
           <option value="citation">Citation Count</option>
+          <option value="citationYear">Citation/Year</option>
       </select>
       </span><span>
       <label>Direction:</label>
@@ -197,6 +198,7 @@
             data:results,
             columns:[
                 {title:"Citation<br>Count", field:"citation", width:'0%', visible:false, headerSort:false},
+                {title:"Citation/Year", field:"citationYear", width:'0%', visible:false, headerSort:false},
                 {title:"Title", field:"title", width:'40%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title", headerSort:false},
                 {title:"Date", field:"date", width:'10%', formatter:dateFormatter , headerSort:false},
                 {title:"Publication", field:"publication", width:"21%", formatter:"html", headerSort:false,  headerFilter:"input", headerFilterPlaceholder: "Search by Publication"},
