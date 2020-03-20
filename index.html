@@ -20,6 +20,9 @@
 
 
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body id="body" data-spy="scroll" data-target=".header" data-offset="0">
@@ -44,17 +47,21 @@
                 <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
                                                     href="images/KarlanCV1016.docx"
                                                     download="Dean Karlan">CV</a></li>
-                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
-                                                    href="#initiatives-promo">Research</a></li>
+                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover" href="#research" onclick="event.preventDefault();">Research</a>
+                </li>
 
                 <li class="js_nav-item nav-item dropdown">
-                    <a class="nav-link nav-item-child nav-item-hover dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link nav-item-child nav-item-hover dropdown-toggle" href="#" id="navbarDropdown"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Publications
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Popular-Writing.html">Popular Writing</a>
-                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Policy-Papers.html">Policy Papers</a>
-                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Academic-Papers.html">Academic Papers</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Academic-Papers.html">Academic
+                            Papers</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Policy-Papers.html">Policy
+                            Papers</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Popular-Writing.html">Popular
+                            Writing</a>
                     </div>
                 </li>
                 <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
@@ -79,16 +86,20 @@
                     <div class="faculty-intro">
                         <span class="faculty-title">Dean Karlan</span><br><br>
                         <h5><p>Professor of Economics and Finance, Kellogg School of Management, Northwestern University
-                        </p><p>Co-Director, Global Poverty Research Lab, Northwestern University
-                        </p><p>President and Founder, Innovations for Poverty Action
-                        </p><p>President and co-Founder, ImpactMatters
-                            </h5>
+                        </p>
+                            <p>Co-Director, Global Poverty Research Lab, Northwestern University
+                            </p>
+                            <p>President and Founder, Innovations for Poverty Action
+                            </p>
+                            <p>President and co-Founder, ImpactMatters</p>
+                        </h5>
                         <br><br>
                         <ul class="list-inline ">
                             <li class="list-inline-item"><a href="mailto:karlan@northwestern.edu"
-                                                            class="social-icons" title="karlan@northwestern.edu" ><i
+                                                            class="social-icons" title="karlan@northwestern.edu"><i
                                     class="fab fa-envelope fa"></i></a></li>
-                            <li class="list-inline-item"><a href="tel:+18474918706 " class="social-icons" title="+1-847-491-8706"><i
+                            <li class="list-inline-item"><a href="tel:+18474918706 " class="social-icons"
+                                                            title="+1-847-491-8706"><i
                                     class="fa fa-phone fa"></i></a></li>
                             <li class="list-inline-item"><a href="#" target="_blank" class="social-icons"
                                                             onclick="window.open('https://scholar.google.com/citations?user=bMOqYycAAAAJ&hl=en', '_blank','width=600,height=600,toolbar=1,location=1,locationbar=1,menubar=1,status=1'); return false;"><i
@@ -98,14 +109,15 @@
                                                             onclick="window.open('https://twitter.com/deankarlan?lang=en', '_blank','width=600,height=600,toolbar=1,location=1,locationbar=1,menubar=1,status=1'); return false;"><i
                                     class="fab fa-twitter" title="Twitter"></i></a>
                             </li>
-                            <li class="list-inline-item"><a href="#footer" class="social-icons" title="Address"><i class="fas fa-map-marker-alt"></i></a>
+                            <li class="list-inline-item"><a href="#footer" class="social-icons" title="Address"><i
+                                    class="fas fa-map-marker-alt"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="faculty-img">
                         <!--  <div class="faculty-img-overlay" >-->
-                               <img src="images/about/DK1.jpeg" alt="Dean Karlan" width="100%">
-   <!--                        </div>-->
+                        <img src="images/about/DK1.jpeg" alt="Dean Karlan" width="100%">
+                        <!--                        </div>-->
                     </div>
                 </div>
 
@@ -115,10 +127,7 @@
 
 
 </div>
-
 <main role="main">
-
-
     <section id="about">
         <div class="container">
             <div class="row">
@@ -131,183 +140,93 @@
                             </p>
                             <div class="about-details">
 
-                                <p>Dean Karlan is the Frederic Esser Nemmers Distinguished Professor of Economics and Finance at Northwestern University, co-Director with Christopher Udry of the Global Poverty Research Lab at Northwestern University, and the Founder and President of <a href="https://www.poverty-action.org" target="_blank">Innovations for Poverty Action</a>, a non-profit organization dedicated to discovering and promoting solutions to global poverty problems. Karlan is also on the Executive Committee of the Board of Directors of the <a href="https://www.povertyactionlab.org" target="_blank"> M.I.T. Jameel Poverty Action Lab</a>. In 2015, he also co-founded <a href="https://www.impactmatters.org" target="_blank">ImpactMatters</a>, a nonprofit dedicated to estimating and rating impact of nonprofit organizations in order to help donors choose good charities and to promote more transparency in the nonprofit sector.
-                                </p><p>    His research focuses on microeconomic issues of poverty, typically employing experimental methodologies and behavioral economics insights to examine what works, what does not, and why to address social problems. His work spans many geographies and topics, including sustainable income generation for those in abject poverty, credit and savings markets for low income households, agriculture for smallholder farmers, small and medium entrepreneurship, weight loss and smoking cessation, and charitable giving. He has worked in over twenty countries around the world, including both low income countries and also the United States.
-                                </p><p>     As a social entrepreneur, he co-founded <a href="https://www.stickk.com" target="_blank">stickK.com</a>, a website that uses lessons from behavioral economics to help people reach personal goals, such as weight loss and smoking cessation, through commitment contracts.
-                            </p><p>        In 2011, Karlan co-authored <b>More Than Good Intentions: How a New Economics is Helping to Solve Global Poverty</b>; in 2016 he co-authored <b>Failing in the Field</b>; in 2018 he co-authored <b>The Goldilocks Challenge: Right-Fit Evidence for the Social Sector</b>; and in 2020 he co-authored the third edition of a economics principles textbook, <b>Economics</b>.
-                            </p><p>Karlan received a Presidential Early Career Award for Scientists and Engineers, an Alfred P. Sloan Foundation Fellowship, and a Guggenheim Fellowship. He was awarded distinguished alumni awards from the University of Chicago Booth Graduate School of Business and the Duke University Talent Identification Program.
-                            </p><p>Previously, Karlan was the Samuel C Park, Jr Professor of Economics at Yale University, and Assistant Professor of Economics at Princeton University. Karlan received a Ph.D. in Economics from M.I.T., an M.B.A. and an M.P.P. from the University of Chicago, and a B.A. in International Affairs from the University of Virginia.
-
-
-
+                                <p>Dean Karlan is the Frederic Esser Nemmers Distinguished Professor of Economics and
+                                    Finance at Northwestern University, co-Director with Christopher Udry of the Global
+                                    Poverty Research Lab at Northwestern University, and the Founder and President of <a
+                                            href="https://www.poverty-action.org" target="_blank">Innovations for
+                                        Poverty Action</a>, a non-profit organization dedicated to discovering and
+                                    promoting solutions to global poverty problems. Karlan is also on the Executive
+                                    Committee of the Board of Directors of the <a
+                                            href="https://www.povertyactionlab.org" target="_blank"> M.I.T. Jameel
+                                        Poverty Action Lab</a>. In 2015, he also co-founded <a
+                                            href="https://www.impactmatters.org" target="_blank">ImpactMatters</a>, a
+                                    nonprofit dedicated to estimating and rating impact of nonprofit organizations in
+                                    order to help donors choose good charities and to promote more transparency in the
+                                    nonprofit sector.
+                                </p>
+                                <p> His research focuses on microeconomic issues of poverty, typically employing
+                                    experimental methodologies and behavioral economics insights to examine what works,
+                                    what does not, and why to address social problems. His work spans many geographies
+                                    and topics, including sustainable income generation for those in abject poverty,
+                                    credit and savings markets for low income households, agriculture for smallholder
+                                    farmers, small and medium entrepreneurship, weight loss and smoking cessation, and
+                                    charitable giving. He has worked in over twenty countries around the world,
+                                    including both low income countries and also the United States.
+                                </p>
+                                <p> As a social entrepreneur, he co-founded <a href="https://www.stickk.com"
+                                                                               target="_blank">stickK.com</a>, a website
+                                    that uses lessons from behavioral economics to help people reach personal goals,
+                                    such as weight loss and smoking cessation, through commitment contracts.
+                                </p>
+                                <p> In 2011, Karlan co-authored <b>More Than Good Intentions: How a New Economics is
+                                    Helping to Solve Global Poverty</b>; in 2016 he co-authored <b>Failing in the
+                                    Field</b>; in 2018 he co-authored <b>The Goldilocks Challenge: Right-Fit Evidence
+                                    for the Social Sector</b>; and in 2020 he co-authored the third edition of a
+                                    economics principles textbook, <b>Economics</b>.
+                                </p>
+                                <p>Karlan received a Presidential Early Career Award for Scientists and Engineers, an
+                                    Alfred P. Sloan Foundation Fellowship, and a Guggenheim Fellowship. He was awarded
+                                    distinguished alumni awards from the University of Chicago Booth Graduate School of
+                                    Business and the Duke University Talent Identification Program.
+                                </p>
+                                <p>Previously, Karlan was the Samuel C Park, Jr Professor of Economics at Yale
+                                    University, and Assistant Professor of Economics at Princeton University. Karlan
+                                    received a Ph.D. in Economics from M.I.T., an M.B.A. and an M.P.P. from the
+                                    University of Chicago, and a B.A. in International Affairs from the University of
+                                    Virginia.
                                 </p>
                             </div>
                             <div class="about-img">
                                 <div class="about-img-overlay">
-                                <img id="about-img1" src="images/about/dk_about3.JPG" alt="Dean Karlan">
+                                    <img id="about-img1" src="images/about/dk_about.JPG" alt="Dean Karlan">
                                 </div>
                                 <br/>
                                 <div class="about-img-overlay">
 
-                                <img id="about-img2" src="images/about/dk_about2.jpg" alt="Dean Karlan">
+                                    <img id="about-img2" src="images/about/dk_about1.jpg" alt="Dean Karlan">
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="initiatives-promo">
-        <div class="initiatives-promo-overlay">
-            <div class="container" id="initiative-container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="initiatives-promo-content">
-                            <h2>Research</h2>
-                            <br/><br/><br/>
-                            <p>
-                                Professor Dean Karlan is leading or involved with the following research initiatives that operate both in low-income countries and the United States: <a href="https://www.poverty-action.org" target="_blank">Global Poverty Research Lab</a> (Northwestern University); <a href="https://www.poverty-action.org/program-area/financial-inclusion" target="_blank">Financial Inclusion Program</a> (Innovations for Poverty Action), <a href="https://www.povertyactionlab.org/sector/finance" target="_blank">Finance Program</a> (M.I.T. Jameel Poverty Action Lab), <a href="https://www.poverty-action.org/program-area/small-and-medium-enterprises" target="_blank"> Small and Medium Enterprises Program</a> (Innovations for Poverty Action), <a href="https://www.poverty-action.org/program-area/social-protection" target="_blank">Social Protection Program</a> (Innovations for Poverty Action).
+    <section id="research">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-container">
+                        <div class="title-container">
+                            <h2 class="section-title">Research</h2>
+                            <p style="text-align: center">
+                                <br/>
                             </p>
-                            <br/><br/>
-
+                                <p>
+                                    Professor Dean Karlan is leading or involved with the following research initiatives that
+                                    operate both in low-income countries and the United States: <a
+                                        href="https://www.poverty-action.org" target="_blank">Global Poverty Research Lab</a>
+                                    (Northwestern University); <a
+                                        href="https://www.poverty-action.org/program-area/financial-inclusion" target="_blank">Financial
+                                    Inclusion Program</a> (Innovations for Poverty Action), <a
+                                        href="https://www.povertyactionlab.org/sector/finance" target="_blank">Finance
+                                    Program</a> (M.I.T. Jameel Poverty Action Lab), <a
+                                        href="https://www.poverty-action.org/program-area/small-and-medium-enterprises"
+                                        target="_blank"> Small and Medium Enterprises Program</a> (Innovations for Poverty
+                                    Action), <a href="https://www.poverty-action.org/program-area/social-protection"
+                                                target="_blank">Social Protection Program</a> (Innovations for Poverty Action).
+                                </p>
                         </div>
-                        <!--<div class="card-deck">
-                            <div class="row  col-lg-4 col-md-6 col-sm-12">
-                                &lt;!&ndash; Card &ndash;&gt;
-                                <div class="card mb-4 ">
-
-                                    &lt;!&ndash;Card image&ndash;&gt;
-                                    <div class="view overlay" style="padding: 50px 20px 0px 20px;">
-                                        <img class="card-img-top" src="images/initiatives/ipa.jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-
-                                    &lt;!&ndash;Card content&ndash;&gt;
-                                    <div class="card-body d-flex flex-column">
-
-                                        &lt;!&ndash;Title&ndash;&gt;
-                                        <h4 class="card-title">IPA</h4>
-                                        &lt;!&ndash;Text&ndash;&gt;
-                                        <p class="card-text">Innovations for Poverty Action (IPA) is a research and
-                                            policy nonprofit that discovers and promotes effective solutions to global
-                                            poverty problems. </p>
-                                        <p>
-                                            Professor Karlan is the Founder and President of IPA.
-                                        </p>
-<br>
-                                        &lt;!&ndash; Provides extra visual weight and identifies the primary action in a set of buttons &ndash;&gt;
-                                        <button type="button" class="btn btn-light-blue btn-md mt-auto"
-                                                onclick="open(url:'www.poverty-action.org', target: 'new')">Learn more
-                                        </button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            &lt;!&ndash; Card &ndash;&gt;
-                            <div class="row  col-lg-4 col-md-6 col-sm-12">
-                                &lt;!&ndash; Card &ndash;&gt;
-                                <div class="card  mb-4 ">
-
-                                    &lt;!&ndash;Card image&ndash;&gt;
-                                    <div class="view overlay" style="padding: 20px 20px 0px 20px;">
-                                        <img class="card-img-top" src="images/initiatives/gprl.jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-
-                                    &lt;!&ndash;Card content&ndash;&gt;
-                                    <div class="card-body d-flex flex-column">
-
-                                        &lt;!&ndash;Title&ndash;&gt;
-                                        <h4 class="card-title">GPRL</h4>
-                                        &lt;!&ndash;Text&ndash;&gt;
-                                        <p class="card-text">GPRL is an academic hub for empirical development economics that addresses the challenges of overcoming poverty and improving well-being.</p>
-                                        <p>Professor Karlan is the co-director of the Global Poverty Research Lab.</p>
-                                        &lt;!&ndash; Provides extra visual weight and identifies the primary action in a set of buttons &ndash;&gt;
-                                        <br>
-                                        <button type="button" class="btn btn-light-blue btn-md mt-auto">Learn more</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                            &lt;!&ndash; Card &ndash;&gt;
-
-                            &lt;!&ndash; Card &ndash;&gt;
-                            <div class="row  col-lg-4 col-md-6 col-sm-12">
-                                <div class="card mb-4 ">
-
-                                    &lt;!&ndash;Card image&ndash;&gt;
-                                    <div class="view overlay">
-                                        <img class="card-img-top" src="images/initiatives/stickk2.jpg"
-                                             alt="Card image cap" style="padding: 0px 50px 0px 50px;">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-
-                                    &lt;!&ndash;Card content&ndash;&gt;
-                                    <div class="card-body d-flex flex-column">
-
-                                        &lt;!&ndash;Title&ndash;&gt;
-                                        <h4 class="card-title">stickk</h4>
-                                        &lt;!&ndash;Text&ndash;&gt;
-                                        <p class="card-text">stickk's mission is to redefine goal-setting using
-                                            behavioral economics that empower behavior change and healthy habits.</p><p>
-                                        Professor Karlan co-founded Stickk to inspire behavior change.</p>
-                                        <br>
-                                        &lt;!&ndash; Provides extra visual weight and identifies the primary action in a set of buttons &ndash;&gt;
-                                        <button type="button" class="btn btn-light-blue btn-md mt-auto">Learn more</button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            &lt;!&ndash; Card &ndash;&gt;
-
-                            &lt;!&ndash; Card &ndash;&gt;
-                            <div class="row  col-lg-4 col-md-6 col-sm-12">
-                                <div class="card mb-4 ">
-
-                                    &lt;!&ndash;Card image&ndash;&gt;
-                                    <div class="view overlay">
-                                        <img class="card-img-top" src="images/initiatives/J-PAL_Logo_mobile.png"
-                                             alt="Card image cap" style="padding: 50px 20px 0px 20px;">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight"></div>
-                                        </a>
-                                    </div>
-
-                                    &lt;!&ndash;Card content&ndash;&gt;
-                                    <div class="card-body d-flex flex-column">
-
-                                        &lt;!&ndash;Title&ndash;&gt;
-                                        <h4 class="card-title"> J-PAL </h4>
-                                        &lt;!&ndash;Text&ndash;&gt;
-                                        <p class="card-text"> M.I.T. Jameel Poverty Action Lab's mission is to reduce
-                                            poverty by ensuring that policy is informed by scientific
-                                            evidence.</p>
-                                        <p>Karlan is on the Executive Committee of the Board of Directors of J-PAL.
-                                        </p>
-                                        <br>
-                                        &lt;!&ndash; Provides extra visual weight and identifies the primary action in a set of buttons &ndash;&gt;
-                                        <button type="button" class="btn btn-light-blue btn-md mt-auto">Learn more</button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            &lt;!&ndash; Card &ndash;&gt;
-
-
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -318,25 +237,22 @@
 <footer id="footer" role="contentinfo">
     <div class="container">
         <div class="footer-area">
-            <p class="footer-content">
-            <div class="col-xs-12">
-                <a href="#"
-                   class="text-uppercase wow zoomIn" target="_blank"><h4>Dean Karlan</h4></a>
-                <h5>Kellogg School of Management | Northwestern University</h5>
-            <h6>Kellogg Global Hub</h6>
-            <h6>2211 Campus Drive, Room 4441</h6>
-            <h6>Evanston, IL 60208</h6>
-            <h6>deankarlan@gmail.com</h6>
+            <div class="footer-content">
+                <div class="col-xs-12">
+                    <a href="#"
+                       class="text-uppercase wow zoomIn" target="_blank"><h4>Dean Karlan</h4></a>
+                    <h5>Kellogg School of Management | Northwestern University</h5>
+                    <h6>Kellogg Global Hub</h6>
+                    <h6>2211 Campus Drive, Room 4441</h6>
+                    <h6>Evanston, IL 60208</h6>
+                    <h6>deankarlan@gmail.com</h6>
 
-        </div>
-            </p>
+                </div>
+            </div>
         </div>
     </div>
 
 </footer>
-
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/jquery-migrate.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.back-to-top.js" type="text/javascript"></script>

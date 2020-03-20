@@ -377,7 +377,7 @@ button:focus {
 
 
 
-#about {
+#about, #research {
 	background-color: #fff;
 	display: inline;
 	float: left;
@@ -499,7 +499,8 @@ button:focus {
 
 
 
-/*#initiatives-promo {
+/*
+#initiatives-promo {
 	background-image: url("../images/about/karlan-home2-1.jpg");
 	background-attachment: fixed;
 	background-position: center center;
