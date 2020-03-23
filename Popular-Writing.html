@@ -93,7 +93,7 @@
                             <br>
                             <div id="popular-writing-table-info" style="display: inline-flex; float: left">
                             </div><div style="display: inline-flex; float: right; margin-right: 30px;">
-                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br><br><br>
+                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br>
                             <div id="popular-writing-table"></div>
 
                         </form>
@@ -228,6 +228,9 @@
 
         var table = new Tabulator("#popular-writing-table", {
             data:results,
+            initialSort : [
+                { column: "date", dir: "desc" }
+            ],
             columns:[
                 {title:"Title", field:"title", width:'60%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
                 {title:"Outlet", field:"Outlet", width:"27%", headerFilter:outletEditor, headerFilterFunc:"like"},
