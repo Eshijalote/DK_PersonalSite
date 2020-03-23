@@ -230,9 +230,11 @@
                 { column: "date", dir: "desc" }
             ],
             columns:[
-                {title:"Title", field:"title", width:'60%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
+                {title:"Title", field:"title", width:'40%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
+                {title:"Date", field:"date", width:'13%', sorter:"date", sorterParams:{format:"MM/DD/YYYY"},formatter:dateFormatter },
                 {title:"Outlet", field:"Outlet", width:"27%", headerFilter:outletEditor, headerFilterFunc:"like"},
-                {title:"Date", field:"date", width:'13%', sorter:"date", sorterParams:{format:"MM/DD/YYYY"},formatter:dateFormatter }
+                {title:"Co-Authors", field:"authors", width:"20%", headerSort:false, headerFilter:"input", headerFilterPlaceholder: "Search by Co-Authors"}
+
             ],
             dataFiltered:function(filters, rows){
                 //filters - array of filters currently applied
