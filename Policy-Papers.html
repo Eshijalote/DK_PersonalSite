@@ -181,6 +181,9 @@
 
         var table = new Tabulator("#policy-papers-table", {
             data:results,
+            initialSort : [
+                { column: "date", dir: "desc" }
+            ],
             columns:[
                 {title:"Title", field:"title", width:'43%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
                 {title:"Date", field:"date", width:'13%%', formatter:dateFormatter},

@@ -96,27 +96,20 @@
                         </div>
                         <div class="table-controls">
       <span>
-       <label>Field: </label>
+       <label>Sort by: </label>
        <select id="sort-field">
-          <option value="title" selected="">Title</option>
-          <option value="date">Date</option>
+           <option value="date">Date</option>
           <option value="citation">Citation Count</option>
           <option value="citationYear">Citation/Year</option>
       </select>
-      </span><span>
-      <label>Direction:</label>
-      <select id="sort-direction">
-          <option value="asc" selected="">Ascending</option>
-          <option value="desc">Descending</option>
-      </select>
-    </span><button id="sort-trigger" class="btn btn-light-blue btn-md waves-effect waves-light">Sort</button>
+      </span>
                         </div><br/>
                         <!-- Card deck -->
                         <form class="paperTable">
                             <br>
                             <div id="academic-papers-table-info" style="display: inline-flex; float: left">
                             </div><div style="display: inline-flex; float: right; margin-right: 30px;">
-                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br><br><br>
+                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br>
 
                             <div id="academic-papers-table"></div>
                         </form>
@@ -197,6 +190,9 @@
 
         var table = new Tabulator("#academic-papers-table", {
             data:results,
+            initialSort : [
+                { column: "date", dir: "desc" }
+            ],
             columns:[
                 {title:"Citation<br>Count", field:"citation", width:'0%', visible:false, headerSort:false},
                 {title:"Citation/Year", field:"citationYear", width:'0%', visible:false, headerSort:false},
@@ -219,6 +215,8 @@
 
         $('#academic-papers-table').addClass("table-striped");
 
+
+
         $(document).on("click","#resetBtn", function(){
             table.clearHeaderFilter();
         });
@@ -227,9 +225,10 @@
             table.redraw(true);
         });
 
+
         //Trigger sort when "Trigger Sort" button is clicked
-        $("#sort-trigger").click(function(){
-            table.setSort($("#sort-field").val(), $("#sort-direction").val());
+        $("#sort-field").change(function(){
+            table.setSort($("#sort-field").val(), 'desc');
         });
 
     }
