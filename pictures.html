@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +14,10 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 
-
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
     <style>
         .container{
             max-width: 100%;
@@ -24,7 +27,7 @@
     </style>
 </head>
 
-<body id="body" >
+<body id="body">
 
 <header class="header fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
@@ -47,19 +50,19 @@
                                                     href="images/KarlanCV1016.docx"
                                                     download="Dean Karlan">CV</a></li>
                 <li class="js_nav-item nav-item dropdown">
-                    <a class="nav-link nav-item-child nav-item-hover dropdown-toggle active" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link nav-item-child nav-item-hover dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Publications
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Academic-Papers.html">Academic Papers</a>
-                        <a class="dropdown-item nav-link nav-item-child nav-item-hover active" href="Policy-Papers.html">Policy Papers</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Policy-Papers.html">Policy Papers</a>
                         <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Popular-Writing.html">Popular Writing</a>
                     </div>
                 </li>
                 <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
                                                     href="books.html">Books</a>
                 </li>
-                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
+                <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover active"
                                                     href="pictures.html">Photos</a>
                 </li>
                 <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
@@ -81,22 +84,36 @@
 
                         <div class="title-container">
 
-                            <h2 class="section-title">Policy Papers</h2><br/><br/>
+                            <h2 class="section-title">Photos</h2><br/><br/>
 
                         </div>
+                        <script>
+                            var c = 0;
+                            var div = "";
 
-                        <form class="paperTable">
+                            function display(results) {
 
-                            <br>
+                                $.each(results, function (i, album) {
+
+                                    document.write("<div class=\"divTableRow\">\n" +
+                                        "                            <div class=\"albumTitle\">\n" +
+                                        "                                <a target=\"_blank\"\n" +
+                                        "                                   href=\"" + album.url + "\">\n" +
+                                        album.title  +
+                                        "                                </a>\n" + " " +
+                                        "                          </div>\n" +
+                                        "                            <div class=\"year\">" + album.year + "</div>" +
+                                        "</div>\n");
+
+                                });
+                            }
+
+                        </script>
 
 
-                            <br>
-                            <div id="policy-papers-table-info" style="display: inline-flex; float: left">
-                            </div><div style="display: inline-flex; float: right; margin-right: 30px;">
-                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br>
-                            <div id="policy-papers-table"></div>
+                        <script src="https://script.google.com/macros/s/AKfycbz6Zv82LiYJVXU3nJZl6AMMmf_ZNlXHdrEafiubFjc1BA6-UsbF/exec?prefix=display">
 
-                        </form>
+                        </script>
 
                     </div>
                 </div>
@@ -126,8 +143,6 @@
 
 </footer>
 
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.back-to-top.js" type="text/javascript"></script>
 <script>
@@ -136,87 +151,6 @@
     });
 </script>
 
-<link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/materialize/tabulator_materialize.min.css" rel="stylesheet">
-<link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/bootstrap/tabulator_bootstrap4.min.css" rel="stylesheet">
-
-<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.5.3/dist/js/tabulator.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script>
-    var dateFormatter = function(cell, formatterParams){
-        var value = cell.getValue();
-
-        if(value){
-            value = moment(Date.parse(value)).format("MM/YYYY");
-        }
-        return value;
-    }
-
-
-
-    var c = 0;
-    var div = "";
-
-    function display(results) {
-
-        function titleFunction(headerValue, rowValue, rowData, filterParams){
-
-            var searchStrings= headerValue.split(" ");
-
-            var stringPresent = false;
-
-            $.each(searchStrings, function (j, searchString) {
-                if(rowData.title.toLowerCase().includes(searchString.toLowerCase())){
-                    stringPresent = true;
-                } else {
-                    stringPresent = false;
-                    return false;
-                }
-            });
-            return stringPresent;
-        }
-
-
-
-
-        var table = new Tabulator("#policy-papers-table", {
-            data:results,
-            initialSort : [
-                { column: "date", dir: "desc" }
-            ],
-            columns:[
-                {title:"Title", field:"title", width:'43%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title"},
-                {title:"Date", field:"date", width:'13%%', formatter:dateFormatter},
-                {title:"Publication", field:"source", width:"18%", headerFilter:"input", headerFilterPlaceholder: "Search by Publication"},
-                {title:"Co-Authors", field:"authors", width:"26%", headerSort:false, headerFilter:"input", headerFilterPlaceholder: "Search by Co-Authors"}
-
-            ],
-            dataFiltered:function(filters, rows){
-                //filters - array of filters currently applied
-                //rows - array of row components that pass the filters
-                var div = document.getElementById('policy-papers-table-info');
-
-                div.innerHTML = 'There are ' + rows.length + " articles available matching your search criteria.";
-
-            }
-        });
-        $('#policy-papers-table').addClass("table-striped");
-
-        $(document).on("click","#resetBtn", function(){
-            table.clearHeaderFilter();
-        });
-        $(window).resize(function() {
-            table.redraw(true);
-        });
-
-
-    }
-
-
-
-</script>
-<script src="https://script.google.com/macros/s/AKfycbxC5Xbhm824X1-MXI0Av4ZNzc0bfZOZF8m-qz4M7JPzY7gzpBb1/exec?prefix=display">
-
-</script>
 
 
 </body>
