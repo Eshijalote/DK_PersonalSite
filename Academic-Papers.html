@@ -109,8 +109,7 @@
                             <br>
                             <div id="academic-papers-table-info" style="display: inline-flex; float: left">
                             </div><div style="display: inline-flex; float: right; margin-right: 30px;">
-                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br><br>
-
+                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br>
                             <div id="academic-papers-table"></div>
                         </form>
                     </div>
@@ -194,7 +193,7 @@
                 { column: "date", dir: "desc" }
             ],
             columns:[
-                {title:"Citation<br>Count", field:"citation", width:'0%', visible:false, headerSort:false},
+                {title:"Citation Count", field:"citation", width:'0%', visible:false, headerSort:false},
                 {title:"Citation/Year", field:"citationYear", width:'0%', visible:false, headerSort:false},
                 {title:"Title", field:"title", width:'40%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title", headerSort:false},
                 {title:"Date", field:"date", width:'10%', formatter:dateFormatter , headerSort:false},
