@@ -838,12 +838,7 @@ input{
 .tabulator .tabulator-header .tabulator-col{
 	background-color: #343a40 !important;
 }
-.alignleft {
-	float: left;
-}
-.alignright {
-	float: right;
-}
+
 @media (max-width: 995px) {
 
 	.book {
@@ -1021,17 +1016,7 @@ input{
 	}
 
 }
-@media (max-width: 575px) {
 
-
-
-	.alignleft, .alignright{
-		float: none;
-		text-align: left;
-	}
-
-
-}
 
 @media (max-width: 480px) {
 

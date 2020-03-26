@@ -89,7 +89,7 @@
 
                             function display(results) {
 
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Project Photos</h2><br/><br/><div class=\"card-deck books\" style=\"text-align: center;\">");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Project Photos</h2><br/><br/>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group == "Project Photos") {
@@ -97,17 +97,19 @@
                                         document.write("<div class=\" col-sm-12\">\n" +
 
                                             "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
-                                            "                                <a target=\"_blank\"\n" +
+
+                                            "<span class=\"year alignleft\">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
+                                            "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
                                             "                          </div>" +
-                                            "                            <div id=\"photos1\" class=\"year alignright \">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</div>" +
+
                                             "</div>\n");
                                     }
                                 });
-                                document.write("</div></div><br><br>");
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Travel Photos</h2><br/><br/><div class=\"card-deck books\" style=\"text-align: center;\">");
+                                document.write("</div><br><br>");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Travel Photos</h2><br/><br/>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group == "Travel Photos") {
@@ -115,17 +117,19 @@
                                         document.write("<div class=\" col-sm-12\">\n" +
 
                                             "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
-                                            "                                <a target=\"_blank\"\n" +
+
+                                            "<span class=\"year alignleft\">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
+                                            "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
                                             "                          </div>" +
-                                            "                            <div id=\"photos1\" class=\"year alignright \">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</div>" +
+
                                             "</div>\n");
                                     }
                                 });
                                 document.write("</div><br><br>");
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Bike Trips</h2><br/><br/><div class=\"card-deck books\" style=\"text-align: center;\">");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Bike Trips</h2><br/><br/>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group == "Bike Trips") {
@@ -133,17 +137,19 @@
                                         document.write("<div class=\" col-sm-12\">\n" +
 
                                             "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
-                                            "                                <a target=\"_blank\"\n" +
+
+                                            "<span class=\"year alignleft\">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
+                                            "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
                                             "                          </div>" +
-                                            "                            <div id=\"photos1\" class=\"year alignright \">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</div>" +
+
                                             "</div>\n");
                                     }
                                 });
-                                document.write("</div></div><br><br>");
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Favorite Albums</h2><br/><br/><div class=\"card-deck books\" style=\"text-align: center;\">");
+                                document.write("</div><br><br>");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Favorite Albums</h2><br/><br/>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group == "Favorite Albums") {
@@ -151,16 +157,18 @@
                                         document.write("<div class=\" col-sm-12\">\n" +
 
                                             "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
-                                            "                                <a target=\"_blank\"\n" +
+
+                                            "<span class=\"year alignleft\">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
+                                            "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
                                             "                          </div>" +
-                                            "                            <div id=\"photos1\" class=\"year alignright \">" + moment(Date.parse(album.year)).format("MM/YYYY") + "</div>" +
+
                                             "</div>\n");
                                     }
                                 });
-                                document.write("</div></div>");
+                                document.write("</div>");
                             }
 
                         </script>
