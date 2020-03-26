@@ -818,6 +818,7 @@ a#navbarDropdown.nav-link.dropdown-toggle:hover{
 	white-space: normal!important;
 
 }
+
 #resetBtn{
 
 	border: none;
@@ -1020,13 +1021,24 @@ input{
 	}
 
 }
+@media (max-width: 575px) {
 
+
+
+	.alignleft, .alignright{
+		float: none;
+		text-align: left;
+	}
+
+
+}
 
 @media (max-width: 480px) {
 
 	.faculty-title img {
 		width: 150px;
 	}
+
 
 
 }
