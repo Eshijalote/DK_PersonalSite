@@ -2,47 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Professor Dean Karlan</title>
-    <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/icon"/>
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="js/jquery.min.js" type="text/javascript"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.5.3/dist/js/tabulator.min.js"></script>
+    <script src="js/tabulator.min.js" type="text/javascript"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
 
     <style>
-    .container{
-        max-width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-</style>
-
+        .container {
+            max-width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
 
 
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body id="body" >
+<body id="body">
 
 <header class="header fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <a class="navbar-brand logo-wrap" href="#body">
             <span style="font-weight:600; font-size:25px; color: #e9e9e9">Professor Dean Karlan</span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#menu"
+                data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -52,16 +51,20 @@
                                                     href="index.html">Home</a>
                 </li>
                 <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
-                                                    href="images/KarlanCV1016.docx"
-                                                    download="Dean Karlan">CV</a></li>
+                                                    download="Dean Karlan"
+                                                    href="images/KarlanCV1016.docx">CV</a></li>
                 <li class="js_nav-item nav-item dropdown">
-                    <a class="nav-link nav-item-child nav-item-hover dropdown-toggle active" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a aria-expanded="false" aria-haspopup="true"
+                       class="nav-link nav-item-child nav-item-hover dropdown-toggle active" data-toggle="dropdown" href="#" id="navbarDropdown">
                         Publications
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item nav-link nav-item-child nav-item-hover active" href="Academic-Papers.html">Academic Papers</a>
-                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Policy-Papers.html">Policy Papers</a>
-                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Popular-Writing.html">Popular Writing</a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover active"
+                           href="Academic-Papers.html">Academic Papers</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Policy-Papers.html">Policy
+                            Papers</a>
+                        <a class="dropdown-item nav-link nav-item-child nav-item-hover" href="Popular-Writing.html">Popular
+                            Writing</a>
                     </div>
                 </li>
                 <li class="js_nav-item nav-item"><a class="nav-link nav-item-child nav-item-hover"
@@ -90,8 +93,10 @@
                             <h2 class="section-title">Academic Papers</h2><br/><br/>
 
                         </div>
-                        <div class="table-controls">
-      <span>
+                        <div class="table-controls" style="display: block">
+
+                            <div style="display: inline-flex;">
+                                 <span>
        <label>Sort by: </label>
        <select id="sort-field">
            <option value="date">Date</option>
@@ -99,13 +104,44 @@
           <option value="citationYear">Citation/Year</option>
       </select>
       </span>
-                        </div><br/>
+                            </div>
+                            <div style="display: inline-flex; float: right; margin-right: 30px;">
+                            <span>
+       <label>Filter by Category: </label>
+       <select id="category-field">
+           <option value="">ALL</option>
+           <option value="Agriculture">Agriculture</option>
+           <option value="Behavioral Economics">Behavioral Economics</option>
+           <option value="Charitable Giving">Charitable Giving</option>
+           <option value="Education">Education</option>
+           <option value="Entrepreneurship">Entrepreneurship</option>
+           <option value="Financial Education">Financial Education</option>
+           <option value="Governance">Governance</option>
+          <option value="Halloween">Halloween</option>
+          <option value="Health">Health</option>
+            <option value="Household Bargaining">Household Bargaining</option>
+           <option value="Household Finance">Household Finance</option>
+           <option value="Managerial Capital">Managerial Capital</option>
+            <option value="Methodological">Methodological</option>
+           <option value="Microcredit">Microcredit</option>
+            <option value="Microsavings">Microsavings</option>
+           <option value="Religion">Religion</option>
+           <option value="Social Capital">Social Capital</option>
+           <option value="Social Protection">Social Protection</option>
+            <option value="Teaching">Teaching</option>
+      </select>
+      </span></div>
+                        </div>
+                        <br/>
                         <!-- Card deck -->
                         <form class="paperTable">
                             <br>
                             <div id="academic-papers-table-info" style="display: inline-flex; float: left">
-                            </div><div style="display: inline-flex; float: right; margin-right: 30px;">
-                            <button type="reset" value="Reset" id="resetBtn">Reset Search</button></div><br>
+                            </div>
+                            <div style="display: inline-flex; float: right; margin-right: 30px;">
+                                <button id="resetBtn" type="reset" value="Reset">Reset Search</button>
+                            </div>
+                            <br>
                             <div id="academic-papers-table"></div>
                         </form>
                     </div>
@@ -120,15 +156,15 @@
     <div class="container">
         <div class="footer-area">
             <p class="footer-content">
-            <div class="col-xs-12">
-            <h4 class="text-uppercase" style="color: #2C7CF6">Dean Karlan</h4>
-                <h5>Kellogg School of Management | Northwestern University</h5>
-                <h6>Kellogg Global Hub</h6>
-                <h6>2211 Campus Drive, Room 4441</h6>
-                <h6>Evanston, IL 60208</h6>
-                <h6>dean.karlan AT gmail.com</h6>
+                <div class="col-xs-12">
+                    <h4 class="text-uppercase" style="color: #2C7CF6">Dean Karlan</h4>
+                    <h5>Kellogg School of Management | Northwestern University</h5>
+                    <h6>Kellogg Global Hub</h6>
+                    <h6>2211 Campus Drive, Room 4441</h6>
+                    <h6>Evanston, IL 60208</h6>
+                    <h6>dean.karlan AT gmail.com</h6>
 
-            </div>
+                </div>
             </p>
         </div>
     </div>
@@ -142,19 +178,18 @@
     });
 </script>
 
-<link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/materialize/tabulator_materialize.min.css" rel="stylesheet">
-<link href="https://unpkg.com/tabulator-tables@4.5.3/dist/css/bootstrap/tabulator_bootstrap4.min.css" rel="stylesheet">
+<link href="css/tabulator_materialize.min.css" rel="stylesheet">
+<link href="css/tabulator_bootstrap4.min.css" rel="stylesheet">
 
 <script>
-    var dateFormatter = function(cell, formatterParams){
+    var dateFormatter = function (cell, formatterParams) {
         var value = cell.getValue();
 
-        if(value){
-            value = moment(Date.parse(value)).format("MM/YYYY");
+        if (value) {
+            value = moment.utc(Date.parse(value)).format("MM/YYYY");
         }
         return value;
-    }
-
+    };
 
 
     var c = 0;
@@ -162,14 +197,14 @@
 
     function display(results) {
 
-        function titleFunction(headerValue, rowValue, rowData, filterParams){
+        function titleFunction(headerValue, rowValue, rowData, filterParams) {
 
-            var searchStrings= headerValue.split(" ");
+            var searchStrings = headerValue.split(" ");
 
             var stringPresent = false;
 
             $.each(searchStrings, function (j, searchString) {
-                if(rowData.title.toLowerCase().includes(searchString.toLowerCase())){
+                if (rowData.title.toLowerCase().includes(searchString.toLowerCase())) {
                     stringPresent = true;
                 } else {
                     stringPresent = false;
@@ -179,23 +214,48 @@
             return stringPresent;
         }
 
-
         var table = new Tabulator("#academic-papers-table", {
-            data:results,
-            initialSort : [
-                { column: "date", dir: "desc" }
+            data: results,
+            initialSort: [
+                {column: "date", dir: "desc"}
             ],
-            columns:[
-                {title:"Citation Count", field:"citation", width:'0%', visible:false, headerSort:false},
-                {title:"Citation/Year", field:"citationYear", width:'0%', visible:false, headerSort:false},
-                {title:"Title", field:"title", width:'40%', headerFilter:"input",formatter:"link", formatterParams:{urlField:"url", target:"_blank"}, headerFilterFunc: titleFunction, headerFilterPlaceholder: "Search by Title", headerSort:false},
-                {title:"Date", field:"date", width:'10%', formatter:dateFormatter , headerSort:false},
-                {title:"Publication", field:"publication", width:"21%", formatter:"html", headerSort:false,  headerFilter:"input", headerFilterPlaceholder: "Search by Publication"},
-                {title:"Co-Authors", field:"authors", width:"29%", headerSort:false, headerFilter:"input", headerFilterPlaceholder: "Search by Co-Authors"}
+            columns: [
+                {title: "Citation Count", field: "citation", width: '0%', visible: false, headerSort: false},
+                {title: "Citation/Year", field: "citationYear", width: '0%', visible: false, headerSort: false},
+                {title: "Category", field: "category", width: '0%', visible: false, headerSort: false},
+                {
+                    title: "Title",
+                    field: "title",
+                    width: '40%',
+                    headerFilter: "input",
+                    formatter: "link",
+                    formatterParams: {urlField: "url", target: "_blank"},
+                    headerFilterFunc: titleFunction,
+                    headerFilterPlaceholder: "Search by Title",
+                    headerSort: false
+                },
+                {title: "Date", field: "date", width: '10%', formatter: dateFormatter, headerSort: false},
+                {
+                    title: "Publication",
+                    field: "publication",
+                    width: "21%",
+                    formatter: "html",
+                    headerSort: false,
+                    headerFilter: "input",
+                    headerFilterPlaceholder: "Search by Publication"
+                },
+                {
+                    title: "Co-Authors",
+                    field: "authors",
+                    width: "29%",
+                    headerSort: false,
+                    headerFilter: "input",
+                    headerFilterPlaceholder: "Search by Co-Authors"
+                }
 
 
             ],
-            dataFiltered:function(filters, rows){
+            dataFiltered: function (filters, rows) {
                 //filters - array of filters currently applied
                 //rows - array of row components that pass the filters
                 var div = document.getElementById('academic-papers-table-info');
@@ -205,31 +265,50 @@
             }
         });
 
+
         $('#academic-papers-table').addClass("table-striped");
 
 
-
-        $(document).on("click","#resetBtn", function(){
+        $(document).on("click", "#resetBtn", function () {
             table.clearHeaderFilter();
+            $("#category-field").prop('selectedIndex', 0);
+            updateFilter();
+
         });
 
-        $(window).resize(function() {
+        $(window).resize(function () {
             table.redraw(true);
         });
 
 
-        //Trigger sort when "Trigger Sort" button is clicked
-        $("#sort-field").change(function(){
+        $("#sort-field").change(function () {
             table.setSort($("#sort-field").val(), 'desc');
+        });
+
+
+        function customFilter(data) {
+
+            return data.category.toLowerCase().includes($("#category-field").val().toLowerCase());
+
+
+        }
+
+        function updateFilter() {
+            var filter = customFilter;
+
+            table.addFilter(filter, $("#category-field").val());
+        }
+
+        $("#category-field").change(function () {
+            updateFilter();
         });
 
     }
 
 
-
 </script>
 <script src="https://script.google.com/macros/s/AKfycbxc0LCf6zSRBSnOGuDPDbokUiIKMtLStxcS1CtdfLSn_xAFTeEH/exec?prefix=display">
-
+             
 </script>
 
 
