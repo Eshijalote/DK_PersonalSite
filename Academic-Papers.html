@@ -131,6 +131,30 @@
             <option value="Teaching">Teaching</option>
       </select>
       </span></div>
+                            <div style="display: inline-flex; float: right; margin-right: 30px;">
+                            <span>
+       <label>Filter by Country: </label>
+       <select id="country-field">
+           <option value="">ALL</option>
+           <option value="Benin">Benin</option>
+           <option value="Bolivia">Bolivia</option>
+           <option value="Chile">Chile</option>
+           <option value="Ethiopia">Ethiopia</option>
+           <option value="Ghana">Ghana</option>
+           <option value="Honduras">Honduras</option>
+           <option value="India">India</option>
+           <option value="Malawi">Malawi</option>
+           <option value="Mali">Mali</option>
+           <option value="Mexico">Mexico</option>
+           <option value="Pakistan">Pakistan</option>
+           <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+           <option value="South Africa">South Africa</option>
+           <option value="Turkey">Turkey</option>
+             <option value="Uganda">Uganda</option>
+           <option value="USA">USA</option>
+      </select>
+      </span></div>
                         </div>
                         <br/>
                         <!-- Card deck -->
@@ -223,6 +247,7 @@
                 {title: "Citation Count", field: "citation", width: '0%', visible: false, headerSort: false},
                 {title: "Citation/Year", field: "citationYear", width: '0%', visible: false, headerSort: false},
                 {title: "Category", field: "category", width: '0%', visible: false, headerSort: false},
+                {title: "Country", field: "country", width: '0%', visible: false, headerSort: false},
                 {
                     title: "Title",
                     field: "title",
@@ -273,6 +298,8 @@
             table.clearHeaderFilter();
             $("#category-field").prop('selectedIndex', 0);
             updateFilter();
+            $("#country-field").prop('selectedIndex', 0);
+            updateCountryFilter();
 
         });
 
@@ -297,10 +324,29 @@
             var filter = customFilter;
 
             table.addFilter(filter, $("#category-field").val());
+
         }
 
         $("#category-field").change(function () {
             updateFilter();
+        });
+
+        function customFilterCountry(data) {
+
+            return data.country.toLowerCase().includes($("#country-field").val().toLowerCase());
+
+
+        }
+
+        function updateCountryFilter() {
+            var filter = customFilterCountry;
+
+            table.addFilter(filter, $("#country-field").val());
+
+        }
+
+        $("#country-field").change(function () {
+            updateCountryFilter();
         });
 
     }
@@ -308,7 +354,7 @@
 
 </script>
 <script src="https://script.google.com/macros/s/AKfycbxc0LCf6zSRBSnOGuDPDbokUiIKMtLStxcS1CtdfLSn_xAFTeEH/exec?prefix=display">
-             
+
 </script>
 
 
