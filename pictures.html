@@ -89,17 +89,21 @@
 
                             function display(results) {
 
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Favorite Albums</h2><br/><br/>");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Favorite Albums</h2>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group.toLowerCase().includes("Photo Collections".toLowerCase()) ){
 
                                         document.write("<div class=\" col-sm-12\">\n" +
 
-                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
+                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" );
+                                        if(album.year==""){
+                                            document.write( "<span class=\"year alignleft\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }else {
+                                            document.write( "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }
 
-                                            "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
-                                            "<a target=\"_blank\"\n" +
+                                        document.write(           "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
@@ -108,18 +112,22 @@
                                             "</div>\n");
                                     }
                                 });
-                                document.write("</div>");
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Project Photos</h2><br/><br/>");
+                                document.write("</div><br><br>");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Project Photos</h2>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group.toLowerCase().includes("Project Photos".toLowerCase()) ){
 
                                         document.write("<div class=\" col-sm-12\">\n" +
 
-                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
+                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">");
+                                        if(album.year==""){
+                                            document.write( "<span class=\"year alignleft\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }else {
+                                            document.write( "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }
 
-                                            "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
-                                            "<a target=\"_blank\"\n" +
+                                        document.write(  "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
@@ -129,17 +137,21 @@
                                     }
                                 });
                                 document.write("</div><br><br>");
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Travel Photos</h2><br/><br/>");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Travel Photos</h2>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group.toLowerCase().includes("Travel Photos".toLowerCase()) ){
 
                                         document.write("<div class=\" col-sm-12\">\n" +
 
-                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
+                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" );
+                                        if(album.year==""){
+                                            document.write( "<span class=\"year alignleft\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }else {
+                                            document.write( "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }
 
-                                            "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
-                                            "<a target=\"_blank\"\n" +
+                                        document.write(        "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
@@ -149,17 +161,21 @@
                                     }
                                 });
                                 document.write("</div><br><br>");
-                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Bike Trips</h2><br/><br/>");
+                                document.write("<div><br><h4 class=\"text-uppercase col-md-12\" style='color: #a29f9f'>Bike Trips</h2>");
 
                                 $.each(results, function (i, album) {
                                     if (album.group.toLowerCase().includes("Bike Trips".toLowerCase())) {
 
                                         document.write("<div class=\" col-sm-12\">\n" +
 
-                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" +
+                                            "                            <div id=\"photos\"  class=\"albumTitle alignleft \">" );
+                                        if(album.year==""){
+                                            document.write( "<span class=\"year alignleft\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }else {
+                                            document.write( "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>" + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+                                        }
 
-                                            "<span class=\"year alignleft\">" + moment.utc(Date.parse(album.year)).format("MM/YYYY") + "</span>"+  "&nbsp;&nbsp;&nbsp;&nbsp;" +
-                                            "<a target=\"_blank\"\n" +
+                                        document.write(  "<a target=\"_blank\"\n" +
                                             "                                   href=\"" + album.url + "\">" +
                                             album.title +
                                             "                                </a>" + " " +
